@@ -1,26 +1,24 @@
-<center>Итоговый проект первого года обучения
+**Итоговый проект первого года обучения**
 В файле Final.ipynb находится исследование набора данных и построение модели с ипользованием различных методов оптимизации и улучшения качества предсказания целевой переменной.
 
-Датасет доступен по ссылке:
-
-https://drive.google.com/file/d/11-ZNNIdcQ7TbT8Y0nsQ3Q0eiYQP__NIW/view?usp=share_link
+Датасет доступен по [ссылке](https://drive.google.com/file/d/11-ZNNIdcQ7TbT8Y0nsQ3Q0eiYQP__NIW/view?usp=share_link)
 
 Датасет необходимо поместить в директорию data/
 
-Файл с моделью доступен для скачивания по ссылке: https://drive.google.com/file/d/18AiNlI18QxBJ__6-ln9kXSPFd5ATf05c/view?usp=share_link
+Файл с моделью доступен для скачивания по [ссылке](https://drive.google.com/drive/folders/1mdr9zaIaWDmuvBUNAzAoopLp_VIm5-El?hl=ru)
 
 Файл с моделью необходимо поместить в директорию web/app/models/
 
+В директории web/app/models/
+
 Образ контейнера, необходимый для работы можно получить с помощью команды:
 
-docker pull nuto4ka/image_final
+docker pull kirillkomarow/final_project:latest
 
 Также образ можно создать самостоятельно с использованием Dockerfile Все необходимые зависимости приведены в файле requirements.txt
 
 Запускать образ командой:
 
-docker run -it --rm --name=server_container -p=4000:4000 image_final
+docker run -it --rm --name=server_container -p=5000:5000 final_project:latest
 
-В реализации ипользуется 4000 порт по причине того, что обычно используемый 5000 порт на системах с MacOs задействаван под работу с Bluetooth.
-
-Запуск образа необходимо осуществлять из директории web/ Запуск клиентского приложения осуществляется командой python3 test/client.py, находясь в директории цуи/
+Запуск образа необходимо осуществлять из директории web/ Запуск клиентского приложения осуществляется командой python3 test/client.py, находясь в директории web/
